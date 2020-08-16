@@ -165,14 +165,14 @@ contract akys{
         removeSupport(SupportOfferList,SupportOfferMap[_supportID]);
         removeSupport(ApprovedSupportOfferList,SupportOfferMap[_supportID]);
     }
-/*
+
     function cancelNeed(string memory _needID) public checkAuth("CHECKER") {
         CanceledNeedOfferList.push(NeedOfferMap[_needID]);
         delete NeedOfferMap[_needID];
         removeNeed(NeedOfferList,NeedOfferMap[_needID]);
         removeNeed(ApprovedNeedOfferList,NeedOfferMap[_needID]);
     }
-*/
+
     function showSupports()public view returns(SupportOffer[] memory){
         return SupportOfferList;
     }
@@ -213,7 +213,7 @@ contract akys{
     function showCanceledSupports() public view returns(SupportOffer[] memory) {
         return CanceledSupportOfferList;
     }
-
+/*
     function showCanceledNeeds() public view returns(NeedOffer[] memory) {
         return CanceledNeedOfferList;
     }
@@ -225,5 +225,5 @@ contract akys{
     function showTotalNeedCount() public view returns(uint256) {
         return NeedOfferList.length;
     }
-    
+  */  
 }
